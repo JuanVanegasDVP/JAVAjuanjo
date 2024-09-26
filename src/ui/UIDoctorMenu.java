@@ -25,6 +25,7 @@ public class UIDoctorMenu {
 
             switch (response){
                 case 1:
+                    showAddAvailableAppointmentMenu();
                     break;
 
                     case 2:
@@ -83,7 +84,8 @@ public class UIDoctorMenu {
     }
 
     private static void checkDoctorAvailableAppointments(Doctor doctor){
-        if (doctor.getAvailableAppointments().size() > 0 &&  !doctorsAvailableAppointments.contains(doctor)){
+        if (doctor.getAvailableAppointments().size() > 0
+            &&  !doctorsAvailableAppointments.contains(doctor)){
             doctorsAvailableAppointments.add(doctor);
 
         }
